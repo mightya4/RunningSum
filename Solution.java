@@ -5,14 +5,10 @@ class Solution {
         int prevSumCache = INITVAL;
         for(int i = INITVAL; i < nums.length; i++) {
             if(i > INITVAL){
-                if(i > INITVAL + 1) {
+                if(i > INITVAL) {
                     prevSumCache = nums[i - 1];
                     nums[i] += prevSumCache;
-                } else {
-                    prevSumCache = nums[i - 1];
-                    nums[i] += prevSumCache;
-
-                }
+                } 
             }
         }
         for(int x : nums){
